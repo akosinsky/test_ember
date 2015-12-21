@@ -1,0 +1,15 @@
+<div class="ui modal" style="width:{{modalWindowWidthComputed}}px; min-width:{{modalWindowWidthComputed}}px; height:{{modalWindowHeightComputed}}px; min-height:{{modalWindowHeightComputed}}px;">
+  <i class="close icon"></i>
+  <div class="header">
+    {{title}}
+  </div>
+  <div class="content" style="height:{{modalWindowContentHeightComputed}}px;">
+    <div class="description">
+      {{yield}}
+    </div>
+  </div>
+  <div class="actions">
+    <button type="button" class="ui cancel button" data-dismiss="modal">Close</button>
+    <button type="button" class="ui positive button">OK</button>
+  </div>
+</div>

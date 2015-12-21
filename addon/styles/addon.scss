@@ -1,0 +1,30 @@
+.form-control-trunc {
+  width: auto;
+  display: inline-block;
+}
+
+table.object-list-view tbody,
+table.object-list-view thead {
+  cursor: pointer;
+}
+
+.lookup-field {
+  width: 235px !important;
+  margin-right: 3px !important;
+}
+
+// Redefine DataTables jQuery UI styles for hovered rows
+table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
+  background-color: #ececec !important;
+}
+
+// Show scroll for big inner content of modal dialog.
+.ui.modal > .content {
+  overflow: auto;
+}
+
+.ui.modal > .actions {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
