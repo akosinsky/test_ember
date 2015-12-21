@@ -1,0 +1,10 @@
+{
+  "esnext": true,
+  "preset": "airbnb",
+  "requirePaddingNewLinesAfterBlocks": {
+    "allExcept": ["inCallExpressions", "inArrayExpressions", "inProperties"]
+  },
+  "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties",
+  "requireTrailingComma": null,
+  "validateQuoteMarks": { "mark": "'", "escape": true }
+}

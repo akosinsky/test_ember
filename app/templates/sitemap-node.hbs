@@ -1,0 +1,9 @@
+{{#if model.link}}
+  {{#link-to model.link class="item"}}
+    {{partial "sitemap-node-content"}}
+  {{/link-to}}
+{{else}}
+  <div class="item">
+    {{partial "sitemap-node-content"}}
+  </div>
+{{/if}}
