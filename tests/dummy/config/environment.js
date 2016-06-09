@@ -1,7 +1,7 @@
 /* jshint node: true */
 
 module.exports = function(environment) {
-  var backendRootUrl = 'https://northwindodata.azurewebsites.net';
+  var backendUrl = 'https://flexberry-ember-dummy.azurewebsites.net';
   var ENV = {
     modulePrefix: 'dummy',
     environment: environment,
@@ -17,32 +17,27 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      backendUrl: backendUrl,
 
       // It's a custom property, used to prevent duplicate backend urls in sources.
       backendUrls: {
-        root: backendRootUrl,
-        api: backendRootUrl + '/odata',
-        authToken: backendRootUrl + '/Token'
+        root: backendUrl,
+        api: backendUrl + '/odata'
       },
+      useUserSettingsService: true,
 
       // Custom property with components settings.
       components: {
-        // Settings for file-component.
-        fileComponent: {
+        // Settings for flexberry-file component.
+        flexberryFile: {
           // URL of file upload controller.
-          uploadUrl: backendRootUrl + '/api/File',
-
-          // URL of file download controller.
-          downloadUrl: backendRootUrl + '/api/File',
+          uploadUrl: backendUrl + '/api/File',
 
           // Max file size in bytes for uploading files.
           maxUploadFileSize: null,
 
-          // Text to be displayed instead of file name, if file has not been selected.
-          placeholder: '(no file)',
-
           // Flag: indicates whether to upload file on controllers modelPreSave event.
-          uploadOnModelPreSave: false,
+          uploadOnModelPreSave: true,
 
           // Flag: indicates whether to show upload button or not.
           showUploadButton: true,
@@ -52,20 +47,8 @@ module.exports = function(environment) {
 
           // Flag: indicates whether to show modal dialog on download errors or not.
           showModalDialogOnDownloadError: true,
-
-          // Add button title.
-          addButtonTitle: 'Add file',
-
-          // Remove button title.
-          removeButtonTitle: 'Remove file',
-
-          // Upload button title.
-          uploadButtonTitle: 'Upload file',
-
-          // Download button title.
-          downloadButtonTitle: 'Download file'
         }
-      }
+      },
     }
   };
 
@@ -79,6 +62,27 @@ module.exports = function(environment) {
     'connect-src': "'self' " + ENV.APP.backendUrls.root
   };
 
+  // Read more about ember-i18n: https://github.com/jamesarosen/ember-i18n.
+  ENV.i18n = {
+    // Should be defined to avoid ember-i18n deprecations.
+    // Locale will be changed then to navigator current locale (in instance initializer).
+    defaultLocale: 'en'
+  };
+
+  // Read more about ember-moment: https://github.com/stefanpenner/ember-moment.
+  // Locale will be changed then to same as ember-i18n locale (and will be changed every time when i18n locale changes).
+  ENV.moment = {
+    outputFormat: 'L'
+  };
+
+  if (environment === 'development') {
+    // ENV.APP.LOG_RESOLVER = true;
+    // ENV.APP.LOG_ACTIVE_GENERATION = true;
+    // ENV.APP.LOG_TRANSITIONS = true;
+    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
+    // ENV.APP.LOG_VIEW_LOOKUPS = true;
+  }
+
   if (environment === 'test') {
     // Testem prefers this...
     ENV.baseURL = '/';
@@ -89,23 +93,11 @@ module.exports = function(environment) {
     ENV.APP.LOG_VIEW_LOOKUPS = false;
 
     ENV.APP.rootElement = '#ember-testing';
-  } else {
-    ENV['simple-auth'] = {
-      authorizer: 'authorizer:custom',
-      crossOriginWhitelist: [ENV.APP.backendUrls.root]
-    };
   }
 
-  /*if (environment === 'development') {
-    // ENV.APP.LOG_RESOLVER = true;
-    // ENV.APP.LOG_ACTIVE_GENERATION = true;
-    // ENV.APP.LOG_TRANSITIONS = true;
-    // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
-    // ENV.APP.LOG_VIEW_LOOKUPS = true;
-  }*/
+  if (environment === 'production') {
 
-  /*if (environment === 'production') {
-  }*/
+  }
 
   return ENV;
 };

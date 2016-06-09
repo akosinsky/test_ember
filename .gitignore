@@ -15,8 +15,22 @@
 /libpeerconnection.log
 npm-debug.log
 testem.log
+/blueprints/**/*.map
 
 # ide and code editor files
 /.idea
 .tern-port
 .dir-locals.el
+/blueprints/.vscode
+/blueprints/tsconfig.json
+/blueprints/.editorconfig
+
+.vscodeignore
+jsconfig.json
+typings/ember/ember.d.ts
+/blueprints/obj/Debug/ember-flexberry.njsprojResolveAssemblyReference.cache
+/blueprints/obj/Debug/ember-flexberry.njsproj.FileListAbsolute.txt
+/blueprints/ember-flexberry.sln
+/blueprints/ember-flexberry.njsproj
+/blueprints/bin/Microsoft.NodejsTools.WebRole.dll
+/blueprints/.vs/ember-flexberry/v14/.suo
