@@ -28,9 +28,8 @@ testem.log
 .vscodeignore
 jsconfig.json
 typings/ember/ember.d.ts
-/blueprints/obj/Debug/ember-flexberry.njsprojResolveAssemblyReference.cache
-/blueprints/obj/Debug/ember-flexberry.njsproj.FileListAbsolute.txt
-/blueprints/ember-flexberry.sln
-/blueprints/ember-flexberry.njsproj
-/blueprints/bin/Microsoft.NodejsTools.WebRole.dll
-/blueprints/.vs/ember-flexberry/v14/.suo
+/blueprints/obj
+/blueprints/test_ember.sln
+/blueprints/test_ember.njsproj
+/blueprints/bin
+/blueprints/.vs
