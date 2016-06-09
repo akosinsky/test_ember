@@ -29,7 +29,7 @@ testem.log
 jsconfig.json
 typings/ember/ember.d.ts
 /blueprints/obj
-/blueprints/test_ember.sln
-/blueprints/test_ember.njsproj
+/blueprints/*.sln
+/blueprints/*.njsproj
 /blueprints/bin
 /blueprints/.vs
