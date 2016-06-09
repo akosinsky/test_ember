@@ -28,7 +28,7 @@ module.exports = {
    * @param {Object} options Options is an object containing general and entity-specific options.
    * @return {Object} Custom template variables.
    */
-  locals: function(options) {
+  locals: function (options) {
     let modelBlueprint = new ModelBlueprint(this, options);
     return {
       parentModelName: modelBlueprint.parentModelName,// for use in files\__root__\models\__name__.js
