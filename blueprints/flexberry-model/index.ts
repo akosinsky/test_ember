@@ -29,7 +29,6 @@ module.exports = {
    * @return {Object} Custom template variables.
    */
   locals: function (options) {
-    //
     let modelBlueprint = new ModelBlueprint(this, options);
     return {
       parentModelName: modelBlueprint.parentModelName,// for use in files\__root__\models\__name__.js

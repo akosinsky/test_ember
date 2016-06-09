@@ -19,54 +19,19 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
-    <Content Include="tsconfig.json" />
-    <Compile Include="ember-flexberry\index.js" />
+    <Content Include=".vscode\DebugCmd.txt" />
     <TypeScriptCompile Include="flexberry-application\index.ts" />
-    <Compile Include="flexberry-application\index.js" />
     <TypeScriptCompile Include="flexberry-core\index.ts" />
-    <Compile Include="flexberry-core\index.js" />
-    <Compile Include="flexberry-core\index0.js" />
     <TypeScriptCompile Include="flexberry-edit-form\index.ts" />
-    <Compile Include="flexberry-edit-form\index.js" />
-    <Compile Include="flexberry-edit-form\index0.js" />
     <TypeScriptCompile Include="flexberry-enum\index.ts" />
-    <Compile Include="flexberry-enum\index.js" />
-    <Compile Include="flexberry-enum\index0.js" />
     <TypeScriptCompile Include="flexberry-list-form\index.ts" />
-    <Compile Include="flexberry-list-form\index.js" />
-    <Compile Include="flexberry-list-form\index0.js" />
     <TypeScriptCompile Include="flexberry-model\index.ts" />
-    <Compile Include="flexberry-model\index.js" />
-    <Compile Include="flexberry-model\index0.js" />
-    <TypeScriptCompile Include="typings\MetadataClasses.d.ts" />
-    <Compile Include="flexberry-core\files\__root__\app.js" />
-    <Compile Include="flexberry-core\files\__root__\resolver.js" />
-    <Compile Include="flexberry-core\files\__root__\router.js" />
-    <Compile Include="flexberry-core\files\__root__\adapters\application.js" />
-    <Compile Include="flexberry-core\files\__root__\controllers\application.js" />
-    <Compile Include="flexberry-core\files\__root__\controllers\sitemap-node.js" />
-    <Compile Include="flexberry-core\files\__root__\models\base.js" />
-    <Compile Include="flexberry-core\files\__root__\routes\application.js" />
-    <Compile Include="flexberry-core\files\__root__\serializers\application.js" />
-    <Compile Include="flexberry-core\files\__root__\services\store.js" />
-    <Compile Include="flexberry-core\files\__root__\views\application.js" />
-    <Compile Include="flexberry-edit-form\files\__root__\controllers\__name__.js" />
-    <Compile Include="flexberry-edit-form\files\__root__\routes\__name__.js" />
-    <Compile Include="flexberry-edit-form\files\__root__\controllers\__name__\new.js" />
-    <Compile Include="flexberry-edit-form\files\__root__\routes\__name__\new.js" />
-    <Compile Include="flexberry-enum\files\__root__\enums\__name__.js" />
-    <Compile Include="flexberry-enum\files\__root__\transforms\__name__.js" />
-    <Compile Include="flexberry-list-form\files\__root__\controllers\__name__.js" />
-    <Compile Include="flexberry-list-form\files\__root__\routes\__name__.js" />
-    <Compile Include="flexberry-model\files\tests\unit\models\__test__.js" />
-    <Compile Include="flexberry-model\files\tests\unit\serializers\__test__.js" />
-    <Compile Include="flexberry-model\files\__root__\models\__name__.js" />
-    <Compile Include="flexberry-model\files\__root__\serializers\__name__.js" />
-    <Content Include="obj\Debug\ember-flexberry.njsproj.FileListAbsolute.txt" />
     <TypeScriptCompile Include="typings\lodash\index.d.ts" />
+    <TypeScriptCompile Include="typings\MetadataClasses.d.ts" />
     <TypeScriptCompile Include="typings\node\node.d.ts" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include=".vscode\" />
     <Folder Include="bin" />
     <Folder Include="ember-flexberry" />
     <Folder Include="flexberry-application" />
@@ -121,6 +86,19 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <TypeScriptTarget>Unknown</TypeScriptTarget>
+    <TypeScriptJSXEmit>-1</TypeScriptJSXEmit>
+    <TypeScriptCompileOnSaveEnabled>True</TypeScriptCompileOnSaveEnabled>
+    <TypeScriptNoImplicitAny>False</TypeScriptNoImplicitAny>
+    <TypeScriptRemoveComments>False</TypeScriptRemoveComments>
+    <TypeScriptOutFile />
+    <TypeScriptOutDir />
+    <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
+    <TypeScriptNoEmitOnError>False</TypeScriptNoEmitOnError>
+    <TypeScriptMapRoot />
+    <TypeScriptSourceRoot />
+  </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
   <ProjectExtensions>
