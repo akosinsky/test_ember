@@ -1,4 +1,4 @@
-/* globals module */
+/* globals module 1*/
 module.exports = {
   afterInstall: function() {
     var _this = this;
