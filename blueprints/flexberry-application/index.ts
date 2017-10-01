@@ -1,7 +1,7 @@
 /// <reference path='../typings/node/node.d.ts' />
 /// <reference path='../typings/MetadataClasses.d.ts' />
 import metadata = require('MetadataClasses');
-//1
+//2
 import fs = require("fs");
 import path = require('path');
 import child_process = require('child_process');
