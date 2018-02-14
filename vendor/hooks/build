@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build --build-arg ARG1=$SOURCE_COMMIT -t $IMAGE_NAME .
+docker build --build-arg ARG1=$IMAGE_NAME -t $IMAGE_NAME .
