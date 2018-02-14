@@ -1,7 +1,6 @@
 FROM busybox
 
-LABEL branch="vendor-build" 
-
-RUN echo $SOURCE_COMMIT; echo $DOCKER_REPO; echo $IMAGE_NAME
+ARG SOURCE_COMMIT
+RUN echo $SOURCE_COMMIT
 
 CMD sh
