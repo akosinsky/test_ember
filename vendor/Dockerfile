@@ -1,6 +1,6 @@
 FROM busybox
 
-ARG ARG1
-RUN echo IMAGE_NAME=$IMAGE_NAME && echo ARG1=$ARG1
+ARG TAG
+RUN echo TAG=$TAG
 
 CMD sh

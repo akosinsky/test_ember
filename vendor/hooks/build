@@ -1,2 +1,6 @@
 #!/bin/sh
-docker build --build-arg ARG1=$IMAGE_NAME -t $IMAGE_NAME .
+export TAG=`echo "index.docker.io/akosinsky/test_ember:16-postgresql-db" | sed 's/:/\n/' | sed '1d'`
+export TAG=`echo $IMAGE_NAME | sed 's/:/\n/' | sed '1d'`
+export REPO=`echo $IMAGE_NAME | sed 's/:/\n/' | sed '2d'`
+
+docker build --build-arg TAG=$TAG -t $IMAGE_NAME -t $REPO:latest .
