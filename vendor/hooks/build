@@ -5,3 +5,4 @@ export REPO=`echo $IMAGE_NAME | sed 's/:/\n/' | sed '2d'`
 
 docker build --build-arg TAG=$TAG -t $IMAGE_NAME .
 docker tag $IMAGE_NAME $REPO:latest
+docker push $REPO:latest
