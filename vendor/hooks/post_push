@@ -1,2 +1,2 @@
 #!/bin/sh
-docker rmi $IMAGE_NAME
+docker rmi index.docker.io/$IMAGE_NAME
