@@ -11,4 +11,3 @@ docker tag $IMAGE_NAME $REPO:latest
 docker push $REPO:latest
 docker tag $IMAGE_NAME $REPO:$TAG
 docker push $REPO:$TAG
-docker rmi $REPO:$TAG $IMAGE_NAME
