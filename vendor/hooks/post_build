@@ -1,2 +1,0 @@
-#!/bin/sh
-docker rmi $IMAGE_NAME
