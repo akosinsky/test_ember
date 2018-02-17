@@ -1,6 +1,4 @@
 #!/bin/sh
-#export TAG=`echo "index.docker.io/akosinsky/test_ember:16-postgresql-db" | sed 's/:/\n/' | sed '1d'`
-
 export POSTFIX=-bus-editor
 export FULL_TAG=`echo $IMAGE_NAME | sed 's/:/\n/' | sed '1d'`
 export TAG=`echo $FULL_TAG | sed "s/$POSTFIX//"`

@@ -1,8 +1,9 @@
 FROM mono:latest as backend
 
 ARG TAG
-RUN mono --version ; \
-    apt update ; \
+RUN 	echo TAG=$TAG ; \
+	mono --version ; \
+    	apt update ; \
 	apt install -y git ; \
 	git clone --depth=50 --branch=$TAG https://github.com/Flexberry/NewPlatform.Flexberry.ServiceBus.Editor.git /Flexberry/NewPlatform.Flexberry.ServiceBus.Editor ; \
 	msbuild /version ; \
@@ -14,7 +15,8 @@ RUN mono --version ; \
 FROM node:6.13 as ember_app
 
 ARG TAG
-RUN	node --version ; npm --version ; \
+RUN	echo TAG=$TAG ; \
+	node --version ; npm --version ; \
 	yarn global add ember-cli@2.4.3 ; \
 	yarn global add bower ; \
 	git clone --depth=50 --branch=$TAG https://github.com/Flexberry/flexberry-service-bus-editor.git /Flexberry/flexberry-service-bus-editor ; \
