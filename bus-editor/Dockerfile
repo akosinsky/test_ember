@@ -5,7 +5,7 @@ RUN 	echo TAG=$TAG ; \
 	mono --version ; \
     	apt update ; \
 	apt install -y git tree ; \
-	git clone --depth=50 --branch=master https://github.com/Flexberry/NewPlatform.Flexberry.ServiceBus.Editor.git /Flexberry/NewPlatform.Flexberry.ServiceBus.Editor ; \
+	git clone --depth=50 --branch=develop https://github.com/Flexberry/NewPlatform.Flexberry.ServiceBus.Editor.git /Flexberry/NewPlatform.Flexberry.ServiceBus.Editor ; \
 	msbuild /version ; \
 	cd /Flexberry/NewPlatform.Flexberry.ServiceBus.Editor ; \
 	nuget restore NewPlatform.Flexberry.ServiceBus.Editor.sln ; \
