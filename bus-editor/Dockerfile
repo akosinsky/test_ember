@@ -11,5 +11,5 @@ RUN 	echo TAG=$TAG ; \
 	nuget restore NewPlatform.Flexberry.ServiceBus.Editor.sln ; \
 	msbuild /p:Configuration=Release NewPlatform.Flexberry.ServiceBus.Editor.sln ; \
 	pwd ; \
-	tree -d
+	tree
 
